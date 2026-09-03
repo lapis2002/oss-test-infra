@@ -23,6 +23,11 @@ periodics:
     testgrid-alert-email: hangdng@google.com
     testgrid-num-failures-to-alert: '3'
     testgrid-alert-stale-results-hours: '6'
+    # Prints the named property inside the result cells. One name for the whole
+    # test group, looked up per cell, so every row the check writes carries its
+    # own number under this name. Inert until the run writes a junit*.xml
+    # holding it -- a cell with no such property renders as it does today.
+    testgrid-in-cell-metric: value
     description: >-
       Measures how long kube-agents CI runs wait before their test can start and
       fails when the pool runbook's thresholds trip. Leases nothing from Boskos.
